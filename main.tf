@@ -44,7 +44,7 @@ EOF
 }
 
 resource "aws_security_group" "three" {
-  name = "eeeelb-sg"
+  name = "eeeaelb-sg"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -68,17 +68,17 @@ resource "aws_security_group" "three" {
 }
 
 resource "aws_s3_bucket" "four" {
-  bucket = "raaaghu2bucketterra"
+  bucket = "raaasaghu2bucketterra"
 }
 
 resource "aws_iam_user" "five" {
-  name = "rahamussse3r11"
+  name = "rahamaussse3r11"
 }
 
 resource "aws_ebs_volume" "six" {
   availability_zone = "us-east-1b"
   size              = 40
   tags = {
-    Name = "ebs-0011"
+    Name = "ebas-0011"
   }
 }
