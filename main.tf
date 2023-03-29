@@ -1,16 +1,16 @@
 #this file consists of code for instances and sg
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIARSPNELGYCJEVYJ4K"
-secret_key = "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"
+access_key = "AKIAXMY6O2REYJXNBYQW"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0d81306eddc614a45"
+  ami             = "ami-04581fbf744a7d11f"
   instance_type   = "t2.micro"
-  key_name        = "rmk8s"
+  key_name        = "jenkins"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -25,11 +25,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0d81306eddc614a45"
+  ami             = "ami-04581fbf744a7d11f"
   instance_type   = "t2.micro"
-  key_name        = "rmk8s"
+  key_name        = "jenkins"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -68,7 +68,7 @@ resource "aws_security_group" "three" {
 }
 
 resource "aws_s3_bucket" "four" {
-  bucket = "raham0077552bucketterra"
+  bucket = "raghu2bucketterra"
 }
 
 resource "aws_iam_user" "five" {
